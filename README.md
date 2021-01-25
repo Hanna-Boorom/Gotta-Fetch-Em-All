@@ -112,3 +112,15 @@ Priority Matrix https://res.cloudinary.com/drzmvvogq/image/upload/v1611607563/Sc
 | MediaQuery/(ies) | L | 30mins| - | - |
 | Total | H | 7.5hrs| - | - |
 
+## Code Snippet
+
+Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+
+```
+function reverse(string) {
+	// here is the code to reverse a string of text
+}
+```
+
+## Change Log
+ Use this section to document what changes were made and the reasoning behind those changes.  
