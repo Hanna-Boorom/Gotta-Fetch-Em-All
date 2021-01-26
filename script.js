@@ -11,14 +11,24 @@ console.log('Welcome to my site! Dev + Design by Hanna Boorom')
 // CONNECTING API AND VERIFYING THAT INFO I WANT IS DISPLAYING IN CONSOLE
 async function fetchOrigPokes(pokemonName) {
   const allPokemon = `https://pokeapi.co/api/v2/pokemon/`
+  const pokeDescr = `https://pokeapi.co/api/v2/pokemon-species/`
 
   try {
     const response = await axios.get(`${allPokemon}${pokemonName}`)
     // console.log(response.data)
-
+    
     let data = response.data
     showPokeData(data)
-    console.log(showPokeData)
+    
+    // console.log(showPokeData)
+
+    try {
+      const descriptions = await axios.get(`${pokeDescr}${pokemonName}`)
+      let descriptionsData = descriptions.data
+      showPokeDescription(descriptionsData)
+    } catch (error) {
+      
+    }
 
   } catch (error) {
     console.log(error)
@@ -41,6 +51,16 @@ const showPokeData = ((pokemon) => {
     let pokeContainer = document.querySelector('.results')
   pokeContainer.insertAdjacentHTML("beforeend", pokeInfo)
     return pokeInfo  
+})
+
+const showPokeDescription = ((pokemon) => {
+  const pokeFlavorText = `
+  <p>${pokemon.flavor_text_entries[1].flavor_text}</p>
+  `
+
+  let pokeDescContainer = document.querySelector('.results')
+  pokeDescContainer.insertAdjacentHTML("beforeend", pokeFlavorText)
+    return pokeFlavorText  
 })
 
 
