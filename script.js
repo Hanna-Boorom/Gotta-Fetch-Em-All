@@ -17,7 +17,7 @@ async function fetchOrigPokes(pokemonName) {
   }
 }
 
-fetchOrigPokes('togepi')
+fetchOrigPokes('pikachu')
 
 
 
