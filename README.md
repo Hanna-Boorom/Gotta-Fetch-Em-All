@@ -96,21 +96,28 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Priority Matrix
 
-Priority Matrix https://res.cloudinary.com/drzmvvogq/image/upload/v1611607563/Screen_Shot_2021-01-25_at_2.34.50_PM_s4tfu5.png
+Priority Matrix https://res.cloudinary.com/drzmvvogq/image/upload/v1611673089/Screen_Shot_2021-01-26_at_8.57.46_AM_i08mw4.png
 
 ## Timeframes
 
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Basic HTML Setup | H | 30mins| - | - |
-| Basic CSS Setup & Styling | H | 1hr| - | - |
-| Connect API/Make a Get Request | H | 30mins| - | - |
-| Display Correct Info & Picture on Page | H | 3hrs| - | - |
-| Clear Results After Making a New Search | H | 1hr| - | - |
-| Flexbox Styling | L | 1hr| - | - |
-| MediaQuery/(ies) | L | 30mins| - | - |
-| Total | H | 7.5hrs| - | - |
+| Basic HTML Setup | H | 1hr| - | - |
+| Basic CSS Setup & Styling | H | 2hr| - | - |
+| Connect API| H | 1hr| - | - |
+| Make First Get Request| H | 1hr| - | - |
+| Target Correct Info from API | H | 2hrs| - | - |
+| Target Correct Picture from API | H | 2hr| - | - |
+| Creating Dynamic HTML Search Using EventListeners  | H | 3hr| - | - |
+| Grab User Input from Search | H | 3hr| - | - |
+| Display Correct Name and Info on Page| H | 3hr| - | - |
+| Display Correct Picture on Page| H | 2hr| - | - |
+| Clear Results After Making a New Search | H | 3hr| - | - |
+| CSS Styling of Each Pokemon's 'Page' | L | 3hr| - | - |
+| Flexbox Styling | L | 3hr| - | - |
+| MediaQuery/(ies) | L | 1hr| - | - |
+| Total | H | 30hrs| - | - |
 
 ## Code Snippet
 
