@@ -14,13 +14,36 @@ async function fetchOrigPokes(pokemonName) {
 
   try {
     const response = await axios.get(`${allPokemon}${pokemonName}`)
-    console.log(response.data)
+    // console.log(response.data)
+
+    let data = response.data
+    showPokeData(data)
+    console.log(showPokeData)
+
   } catch (error) {
     console.log(error)
   }
 }
-
 // fetchOrigPokes('pikachu')
+
+const showPokeData = ((pokemon) => {
+  const pokeInfo = `
+  <div class= 'container'>
+  <h1>Name: ${pokemon.name}</h1>
+  <img src='${pokemon.sprites.front_default}' alt ='Pokemon Image' class='image'>
+  <h2>Pokedex Number: ${pokemon.order}</h2>
+   <h3>Type: ${pokemon.types[0].type.name}</h3>
+    <p>Height: ${pokemon.height} dm</p>
+    <p> Weight: ${pokemon.weight} hg</p>
+  </div>
+  `
+    //** Append Pokemon Data to page
+    let pokeContainer = document.querySelector('.results')
+  pokeContainer.insertAdjacentHTML("beforeend", pokeInfo)
+    return pokeInfo  
+})
+
+
 
 
 // ** Attach an event listener that simply logs the text value of the input...
