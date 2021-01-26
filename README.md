@@ -1,10 +1,10 @@
 # Project Overview
 
 ## Project Name
-NostalgiaDex
+Gotta Fetch 'Em All!
 
 ## Project Description
-NostalgiaDex will allow users to search their favorite Pokemon from the original (Red, Blue, and Yellow) games and learn all about them. Just like a real PokeDex!
+Gotta Fetch 'Em All! will allow users to search their favorite Pokemon from the original (Red, Blue, and Yellow) games and learn all about them. Just like a real PokeDex!
 
 ## API and Data Sample
 
