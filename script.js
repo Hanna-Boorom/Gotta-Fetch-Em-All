@@ -26,6 +26,7 @@ async function fetchOrigPokes(pokemonName) {
       const descriptions = await axios.get(`${pokeDescr}${pokemonName}`)
       let descriptionsData = descriptions.data
       showPokeDescription(descriptionsData)
+      console.log(descriptionsData.flavor_text_entries[1].flavor_text)
     } catch (error) {
       
     }
@@ -41,8 +42,7 @@ const showPokeData = ((pokemon) => {
   <div class= 'container'>
   <h1>Name: ${pokemon.name}</h1>
   <img src='${pokemon.sprites.front_default}' alt ='Pokemon Image' class='image'>
-  <h2>Pokedex Number: ${pokemon.order}</h2>
-   <h3>Type: ${pokemon.types[0].type.name}</h3>
+   <h2>Type: ${pokemon.types[0].type.name}</h2>
     <p>Height: ${pokemon.height} dm</p>
     <p> Weight: ${pokemon.weight} hg</p>
   </div>
