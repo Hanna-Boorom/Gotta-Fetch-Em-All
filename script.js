@@ -45,11 +45,16 @@ const showPokeData = ((pokemon) => {
   let pokeContainer = document.querySelector('.results')
   pokeContainer.insertAdjacentHTML("beforeend", pokeInfo)
 
+  const capitalize = document.querySelector('.container')
+  capitalize.style.textTransform = 'capitalize'
+
+  // ** CLEAR OUT SEARCH BAR AFTER MAKING A SEARCH
   const form = document.querySelector('form')
   form.reset()
 
   return pokeInfo
 })
+
 
 const showPokeDescription = ((pokemon) => {
   const pokeFlavorText = `
@@ -81,6 +86,8 @@ const removePokes = () => {
     imageDiv.removeChild(imageDiv.lastChild)
   }
 }
+
+
 
 
 
