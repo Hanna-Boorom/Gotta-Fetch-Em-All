@@ -87,8 +87,8 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |  Day | Deliverable | Status
 |---|---| ---|
 |Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|Jan 26| Project Approval/ Core HTML & CSS Setup | Incomplete
-|Jan 27| Core JS Functionality / Connect to API  | Incomplete
+|Jan 26| Project Approval/ Core HTML & CSS Setup | Complete
+|Jan 27| Core JS Functionality / Connect to API  | Complete
 |Jan 28| Display Correct Data / Finish Basic Styling | Incomplete
 |Jan 29| MVP | Incomplete
 |Jan 30 & 31| Bonus Styling | Incomplete
