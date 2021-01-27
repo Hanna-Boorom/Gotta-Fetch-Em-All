@@ -18,11 +18,16 @@ header, section, footer {
   max-width: 100%;
 }
 
+.header-h3, footer {
+  font-family: 'Jura', sans-serif;
+}
+
 .results {
   justify-content: center;
   margin-top: 100px;
   margin-bottom: 100px;
   border-radius: 10px;
+  font-family: 'Jura', sans-serif;
 }
 
 .results, .description {
@@ -45,6 +50,7 @@ header, section, footer {
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  font-weight: bold;
 }
 
 .description {
