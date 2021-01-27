@@ -16,20 +16,14 @@ async function fetchOrigPokes(pokemonName) {
   try {
     const response = await axios.get(`${allPokemon}${pokemonName}`)
     // console.log(response.data)
-    
+
     let data = response.data
     showPokeData(data)
-    
     // console.log(showPokeData)
 
-    try {
-      const descriptions = await axios.get(`${pokeDescr}${pokemonName}`)
-      let descriptionsData = descriptions.data
-      showPokeDescription(descriptionsData)
-      // console.log(descriptionsData.flavor_text_entries[1].flavor_text)
-    } catch (error) {
-      console.log(error)
-    }
+    const descriptions = await axios.get(`${pokeDescr}${pokemonName}`)
+    let descriptionsData = descriptions.data
+    showPokeDescription(descriptionsData)
 
   } catch (error) {
     alert(`Ooops! It looks like you didn't spell that right, try again!`)
@@ -47,10 +41,14 @@ const showPokeData = ((pokemon) => {
     <p> Weight: ${pokemon.weight} hg</p>
   </div>
   `
-    //** Append Pokemon Data to page
-    let pokeContainer = document.querySelector('.results')
+  //** Append Pokemon Data to page
+  let pokeContainer = document.querySelector('.results')
   pokeContainer.insertAdjacentHTML("beforeend", pokeInfo)
-    return pokeInfo  
+
+  const form = document.querySelector('form')
+  form.reset()
+
+  return pokeInfo
 })
 
 const showPokeDescription = ((pokemon) => {
@@ -60,7 +58,7 @@ const showPokeDescription = ((pokemon) => {
 
   let pokeDescContainer = document.querySelector('.results')
   pokeDescContainer.insertAdjacentHTML("beforeend", pokeFlavorText)
-    return pokeFlavorText  
+  return pokeFlavorText
 })
 
 
@@ -77,7 +75,7 @@ selectInput.addEventListener('submit', (e) => {
 })
 
 // ** REMOVE ENTRY FROM PAGE WHEN A NEW POKEMON IS SEARCHED...
-const removePokes =() => {
+const removePokes = () => {
   const imageDiv = document.querySelector('.results')
   while (imageDiv.lastChild) {
     imageDiv.removeChild(imageDiv.lastChild)
