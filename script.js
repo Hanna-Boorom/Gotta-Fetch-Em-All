@@ -26,7 +26,7 @@ async function fetchOrigPokes(pokemonName) {
     showPokeDescription(descriptionsData)
 
   } catch (error) {
-    alert(`Ooops! It looks like you didn't spell that right, try again!`)
+    alert(`Ooops! It looks like you didn't enter anything or what you entered was spelled incorrectly, try again!`)
   }
 }
 // fetchOrigPokes('pikachu')
@@ -41,9 +41,17 @@ const showPokeData = ((pokemon) => {
     <p> Weight: ${pokemon.weight} hg</p>
   </div>
   `
+  
+
   //** Append Pokemon Data to page
   let pokeContainer = document.querySelector('.results')
   pokeContainer.insertAdjacentHTML("beforeend", pokeInfo)
+
+  if (pokemon.types[0].type.name == 'fire') {
+    pokeContainer.style.backgroundColor = "#ffb380"
+  } else {
+    null
+  }
 
   const capitalize = document.querySelector('.container')
   capitalize.style.textTransform = 'capitalize'
@@ -75,9 +83,12 @@ selectInput.addEventListener('submit', (e) => {
   e.preventDefault()
   const inputValue = document.querySelector('#search-bar').value
   // console.log(inputValue)
+
   removePokes()
   fetchOrigPokes(inputValue)
 })
+
+
 
 // ** REMOVE ENTRY FROM PAGE WHEN A NEW POKEMON IS SEARCHED...
 const removePokes = () => {
