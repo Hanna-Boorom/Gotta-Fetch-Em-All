@@ -26,13 +26,13 @@ async function fetchOrigPokes(pokemonName) {
       const descriptions = await axios.get(`${pokeDescr}${pokemonName}`)
       let descriptionsData = descriptions.data
       showPokeDescription(descriptionsData)
-      console.log(descriptionsData.flavor_text_entries[1].flavor_text)
+      // console.log(descriptionsData.flavor_text_entries[1].flavor_text)
     } catch (error) {
-      
+      console.log(error)
     }
 
   } catch (error) {
-    console.log(error)
+    alert(`Ooops! It looks like you didn't spell that right, try again!`)
   }
 }
 // fetchOrigPokes('pikachu')
