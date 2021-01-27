@@ -41,7 +41,7 @@ const showPokeData = ((pokemon) => {
     <p> Weight: ${pokemon.weight} hg</p>
   </div>
   `
-  
+
 
   //** Append Pokemon Data to page
   let pokeContainer = document.querySelector('.results')
@@ -49,8 +49,34 @@ const showPokeData = ((pokemon) => {
 
   if (pokemon.types[0].type.name == 'fire') {
     pokeContainer.style.backgroundColor = "#ffb380"
+  } else if (pokemon.types[0].type.name == 'electric') {
+    pokeContainer.style.backgroundColor = "#ffe680"
+  } else if (pokemon.types[0].type.name == 'grass') {
+    pokeContainer.style.backgroundColor = "#bfff80"
+  } else if (pokemon.types[0].type.name == 'bug') {
+    pokeContainer.style.backgroundColor = "#d4d4aa"
+  } else if (pokemon.types[0].type.name == 'water') {
+    pokeContainer.style.backgroundColor = "#cce0ff"
+  } else if (pokemon.types[0].type.name == 'dragon') {
+    pokeContainer.style.backgroundColor = "#b3b3cc"
+  } else if (pokemon.types[0].type.name == 'fighting') {
+    pokeContainer.style.backgroundColor = "#df9f9f"
+  } else if (pokemon.types[0].type.name == 'ghost') {
+    pokeContainer.style.backgroundColor = "#9494b8"
+  } else if (pokemon.types[0].type.name == 'ground') {
+    pokeContainer.style.backgroundColor = "#dfbf9f"
+  } else if (pokemon.types[0].type.name == 'ice') {
+    pokeContainer.style.backgroundColor = "#ccffff"
+  } else if (pokemon.types[0].type.name == 'normal') {
+    pokeContainer.style.backgroundColor = "#ffd480"
+  } else if (pokemon.types[0].type.name == 'poison') {
+    pokeContainer.style.backgroundColor = "#e0b3ff"
+  } else if (pokemon.types[0].type.name == 'psychic') {
+    pokeContainer.style.backgroundColor = "#e699cc"
+  } else if (pokemon.types[0].type.name == 'rock') {
+    pokeContainer.style.backgroundColor = "#cc9966"
   } else {
-    null
+    pokeContainer.style.backgroundColor = "white"
   }
 
   const capitalize = document.querySelector('.container')
