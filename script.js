@@ -58,7 +58,7 @@ const showPokeData = ((pokemon) => {
 
 const showPokeDescription = ((pokemon) => {
   const pokeFlavorText = `
-  <p>${pokemon.flavor_text_entries[1].flavor_text}</p>
+  <p class= 'description'>${pokemon.flavor_text_entries[1].flavor_text}</p>
   `
 
   let pokeDescContainer = document.querySelector('.results')
