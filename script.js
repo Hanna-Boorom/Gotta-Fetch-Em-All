@@ -72,8 +72,17 @@ selectInput.addEventListener('submit', (e) => {
   e.preventDefault()
   const inputValue = document.querySelector('#search-bar').value
   // console.log(inputValue)
+  removePokes()
   fetchOrigPokes(inputValue)
 })
+
+// ** REMOVE ENTRY FROM PAGE WHEN A NEW POKEMON IS SEARCHED...
+const removePokes =() => {
+  const imageDiv = document.querySelector('.results')
+  while (imageDiv.lastChild) {
+    imageDiv.removeChild(imageDiv.lastChild)
+  }
+}
 
 
 
