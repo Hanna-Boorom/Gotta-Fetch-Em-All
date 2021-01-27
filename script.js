@@ -34,7 +34,7 @@ async function fetchOrigPokes(pokemonName) {
 const showPokeData = ((pokemon) => {
   const pokeInfo = `
   <div class= 'container'>
-  <h1>Name: ${pokemon.name}</h1>
+  <h2>Name: ${pokemon.name}</h2>
   <img src='${pokemon.sprites.front_default}' alt ='Pokemon Image' class='image'>
    <h2>Type: ${pokemon.types[0].type.name}</h2>
     <p>Height: ${pokemon.height} dm</p>
@@ -47,6 +47,7 @@ const showPokeData = ((pokemon) => {
   let pokeContainer = document.querySelector('.results')
   pokeContainer.insertAdjacentHTML("beforeend", pokeInfo)
 
+  // ** CHANGE BACKGROUND COLOR BASED ON TYPE
   if (pokemon.types[0].type.name == 'fire') {
     pokeContainer.style.backgroundColor = "#ffb380"
   } else if (pokemon.types[0].type.name == 'electric') {

@@ -22,6 +22,7 @@ header, section, footer {
   justify-content: center;
   margin-top: 100px;
   margin-bottom: 100px;
+  border-radius: 10px;
 }
 
 .results, .description {
@@ -43,10 +44,22 @@ header, section, footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
+}
+
+.description {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+p.description {
+  font-size: 20px;
 }
