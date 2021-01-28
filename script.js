@@ -5,8 +5,6 @@ console.log('Welcome to my site! Dev + Design by Hanna Boorom')
 // ** 2. TARGET CORRECT POKEMON
 // ** 3. ASSIGN USER INPUT 
 
-// const baseUrl = `https://pokeapi.co/api/v2/pokemon?limit=151`
-
 
 // CONNECTING API AND VERIFYING THAT INFO I WANT IS DISPLAYING IN CONSOLE
 async function fetchOrigPokes(pokemonName) {
@@ -52,11 +50,11 @@ const showPokeData = ((pokemon) => {
   let pokeContainer = document.querySelector('.results')
   pokeContainer.insertAdjacentHTML("beforeend", pokeInfo)
 
+  // ** IF A POKEMON HAS MORE THAN ONE TYPE, SHOW ON PAGE
   if (pokemon.types.length === 2) {
     let pokeType2 = pokemon.types[1].type.name
     let resultsContainer = document.querySelector('.container')
     resultsContainer.insertAdjacentHTML('afterbegin', `<h3 class="type2">Secondary Type: ${pokeType2}</h3>`)
-    console.log(pokeType2)
   } else {
     pokeType2 = null;
   }

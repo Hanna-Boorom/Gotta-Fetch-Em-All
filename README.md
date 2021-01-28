@@ -103,29 +103,41 @@ Priority Matrix https://res.cloudinary.com/drzmvvogq/image/upload/v1611673089/Sc
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Basic HTML Setup | H | 1hr| - | - |
-| Basic CSS Setup & Styling | H | 2hr| - | - |
-| Connect API| H | 1hr| - | - |
-| Make First Get Request| H | 1hr| - | - |
-| Target Correct Info from API | H | 2hrs| - | - |
-| Target Correct Picture from API | H | 2hr| - | - |
-| Creating Dynamic HTML Search Using EventListeners  | H | 3hr| - | - |
-| Grab User Input from Search | H | 3hr| - | - |
-| Display Correct Name and Info on Page| H | 3hr| - | - |
-| Display Correct Picture on Page| H | 2hr| - | - |
-| Clear Results After Making a New Search | H | 3hr| - | - |
-| CSS Styling of Each Pokemon's 'Page' | L | 3hr| - | - |
-| Flexbox Styling | L | 3hr| - | - |
-| MediaQuery/(ies) | L | 1hr| - | - |
-| Total | H | 30hrs| - | - |
+| Basic HTML Setup | H | 1hr| 30min | 30min |
+| Basic CSS Setup & Styling | H | 2hr| 3hr| 3hr |
+| Connect API| H | 1hr| 30min | 30min |
+| Make First Get Request| H | 1hr| 30min | 30min |
+| Target Correct Info from API | H | 2hrs| 1hr | 1hr |
+| Target Correct Picture from API | H | 2hr| 1hr | 1hr|
+| Creating Dynamic HTML Search Using EventListeners  | H | 3hr| 2hr| 2hr |
+| Grab User Input from Search | H | 3hr| 1hr | 1hr |
+| Display Correct Name and Info on Page| H | 3hr| 3hr | 3hr |
+| Display Correct Picture on Page| H | 2hr| 1hr | 1hr |
+| Clear Results After Making a New Search | H | 3hr| 30min | 30min |
+| CSS Styling of Each Pokemon's 'Page' | L | 3hr| 4hr | 4hr |
+| Flexbox Styling | L | 3hr| 4hr | 4hr |
+| MediaQuery/(ies) | L | 1hr| 1hr | 1hr |
+| Total | H | 30hr| 23hr | 23hr |
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+The descriptions of the Pokemon were from a different endpoint that the original one I used, so I had to make a second API call and I'm proud it works! 
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+try {
+    const response = await axios.get(`${allPokemon}${pokemonName}`)
+    
+
+    let data = response.data
+    showPokeData(data)
+
+    const descriptions = await axios.get(`${pokeDescr}${pokemonName}`)
+    let descriptionsData = descriptions.data
+    showPokeDescription(descriptionsData)
+
+  } catch (error) {
+    alert(`Ooops! It looks like you didn't enter anything or what you entered was spelled incorrectly, try again!`)
+  }
 }
 ```
 
