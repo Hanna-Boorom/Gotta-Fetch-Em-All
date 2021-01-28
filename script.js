@@ -112,10 +112,12 @@ const selectInput = document.querySelector('.search-section')
 selectInput.addEventListener('submit', (e) => {
   e.preventDefault()
   const inputValue = document.querySelector('#search-bar').value
+  
+  let lowerCaseValue = inputValue.toLowerCase()
   // console.log(inputValue)
 
   removePokes()
-  fetchOrigPokes(inputValue)
+  fetchOrigPokes(lowerCaseValue)
 })
 
 

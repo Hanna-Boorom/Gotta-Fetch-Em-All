@@ -68,6 +68,12 @@ header, section, footer {
   font-weight: bold;
 }
 
+.image {
+  background-color: white;
+    border-radius: 20px;
+    border: black solid 1px;
+}
+
 .description {
   margin: 20px;
   padding: 20px;
@@ -79,6 +85,10 @@ header, section, footer {
 footer {
   bottom: 0;
   width: 100%;
+}
+
+.fab {
+  color: black;
 }
 
 p.description {
