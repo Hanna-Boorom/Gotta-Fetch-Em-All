@@ -47,6 +47,9 @@ const showPokeData = ((pokemon) => {
   let pokeContainer = document.querySelector('.results')
   pokeContainer.insertAdjacentHTML("beforeend", pokeInfo)
 
+  // ** STYLING THAT ONLY SHOWS UP WHEN THE CONTENT LOADS
+  pokeContainer.style.border = "thin solid black"
+
   // ** CHANGE BACKGROUND COLOR BASED ON TYPE
   if (pokemon.types[0].type.name == 'fire') {
     pokeContainer.style.backgroundColor = "#ffb380"

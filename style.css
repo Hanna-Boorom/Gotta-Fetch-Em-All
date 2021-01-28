@@ -9,6 +9,7 @@
   height: 100px;
   border: none;
   color: white;
+  border-radius: 50px;
 }
 
 #search-button:hover {
@@ -40,6 +41,7 @@ header, section, footer {
   margin-bottom: 100px;
   border-radius: 10px;
   font-family: 'Jura', sans-serif;
+  /* border: solid black 1px; */
 }
 
 .results, .description {
@@ -53,6 +55,7 @@ header, section, footer {
 .results p {
   display: flex;
   align-items: center;
+  
 }
 
 
@@ -70,10 +73,10 @@ header, section, footer {
   padding: 20px;
   background-color: white;
   border-radius: 10px;
+  border: solid black 1px;
 }
 
 footer {
-  position: absolute;
   bottom: 0;
   width: 100%;
 }
