@@ -36,16 +36,30 @@ const showPokeData = ((pokemon) => {
   <div class= 'container'>
   <h2>Name: ${pokemon.name}</h2>
   <img src='${pokemon.sprites.front_default}' alt ='Pokemon Image' class='image'>
-   <h2>Type: ${pokemon.types[0].type.name}</h2>
-    <p>Height: ${pokemon.height} dm</p>
-    <p> Weight: ${pokemon.weight} hg</p>
+   <h3>Primary Type: ${pokemon.types[0].type.name}</h3>
+    <p class="height">Height: ${pokemon.height} dm</p>
+    <p class="weight"> Weight: ${pokemon.weight} hg</p>
   </div>
   `
+  // console.log(pokeInfo.h2)
 
+  // if (pokeType2 !== null) {
+  //   pokeContainer.insertAdjacentHTML('beforeend', `<h2 class="type2">Secondary Type: ${pokeType2}</h2>`)
+  // }
+    
 
   //** Append Pokemon Data to page
   let pokeContainer = document.querySelector('.results')
   pokeContainer.insertAdjacentHTML("beforeend", pokeInfo)
+
+  if (pokemon.types.length === 2) {
+    let pokeType2 = pokemon.types[1].type.name
+    let resultsContainer = document.querySelector('.container')
+    resultsContainer.insertAdjacentHTML('afterbegin', `<h3 class="type2">Secondary Type: ${pokeType2}</h3>`)
+    console.log(pokeType2)
+  } else {
+    pokeType2 = null;
+  }
 
   // ** STYLING THAT ONLY SHOWS UP WHEN THE CONTENT LOADS
   pokeContainer.style.border = "thin solid black"

@@ -96,6 +96,24 @@ p.results  {
     padding: 10px;
 }
 
+h2.container {
+  order: 0;
+}
+
+.type2 {
+  order: 1;
+}
+
+.height {
+  order: 2;
+}
+
+.weight {
+  order: 3;
+}
+
+
+
 .description {
   margin: 20px;
   padding: 20px;
