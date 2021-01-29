@@ -27,7 +27,6 @@ async function fetchOrigPokes(pokemonName) {
     alert(`Ooops! It looks like you didn't enter anything or what you entered was spelled incorrectly, try again!`)
   }
 }
-// fetchOrigPokes('pikachu')
 
 const showPokeData = ((pokemon) => {
   const pokeInfo = `
@@ -39,12 +38,7 @@ const showPokeData = ((pokemon) => {
     <p class="weight"> Weight: ${pokemon.weight} hg</p>
   </div>
   `
-  // console.log(pokeInfo.h2)
 
-  // if (pokeType2 !== null) {
-  //   pokeContainer.insertAdjacentHTML('beforeend', `<h2 class="type2">Secondary Type: ${pokeType2}</h2>`)
-  // }
-    
 
   //** Append Pokemon Data to page
   let pokeContainer = document.querySelector('.results')

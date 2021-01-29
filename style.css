@@ -2,20 +2,31 @@
   min-height: calc(100vh - 80px);
 }
 
+/* Headers */
+
+.header-h1 > img {
+  max-width: 100%;
+}
+
+.header-h3, footer {
+  font-family: 'Jura', sans-serif;
+}
+
+
+/* Search bar and button */
+
 .search-section {
   margin: 20px;
   font-family: 'Jura', sans-serif;
 }
 
 #search-button {
-  /* background-image: url('http://pngimg.com/uploads/pokeball/pokeball_PNG24.png'); */
   background-size: cover;
   width: 50px;
   height: 50px;
   border: none;
   color: white;
-  border-radius: 50px;
-  
+  border-radius: 50px; 
 }
 
 .search-button-label {
@@ -31,9 +42,11 @@ form {
   display: flex;
 }
 
-/* .button-text {
-  vertical-align: top;
-} */
+#search-bar {
+  height: fit-content;
+  margin-top: 15px;
+}
+
 
 #search-button:hover {
   transform: scale(1.25, 1.25);
@@ -42,7 +55,7 @@ form {
   margin-left: 20px;
 }
 
-
+/* A little bit of everything */
 
 
 header, section, footer {
@@ -52,13 +65,7 @@ header, section, footer {
   align-items: center;
 }
 
-.header-h1 > img {
-  max-width: 100%;
-}
-
-.header-h3, footer {
-  font-family: 'Jura', sans-serif;
-}
+/* Results of search */
 
 .results {
   justify-content: center;
@@ -66,7 +73,6 @@ header, section, footer {
   margin-bottom: 100px;
   border-radius: 10px;
   font-family: 'Jura', sans-serif;
-  /* border: solid black 1px; */
 }
 
 .results, .description {
@@ -82,8 +88,6 @@ p.results  {
   align-items: center;
   
 }
-
-
 
 .container {
   display: flex;
@@ -117,7 +121,6 @@ h2.container {
 }
 
 
-
 .description {
   margin: 20px;
   padding: 20px;
@@ -126,11 +129,15 @@ h2.container {
   border: solid black 1px;
   display: flex;
   align-items: center;
+  text-align: center;
 }
 
 p.description {
   font-size: 20px;
 }
+
+
+/* Footer */
 
 footer {
     position: relative;
@@ -154,6 +161,7 @@ footer {
 }
 
 
+/* Media queries */
 
 @media screen and (max-width: 600px), (max-width: 900px) {
   .header-h1-image {
