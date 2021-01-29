@@ -1,5 +1,5 @@
 // background.js
-browser.runtime.onMessage.addListener(message => {
+chrome.runtime.onMessage.addListener(message => {
   console.log("background: onMessage", message);
 
   // Add this line:
