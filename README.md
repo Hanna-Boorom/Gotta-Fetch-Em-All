@@ -141,5 +141,5 @@ try {
 }
 ```
 
-## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+## Change Log 
+I initially wanted to do a loading bar as a bonus, but I decided against that since I didn't want the user to feel like they were waiting any longer than necessary for the data. I opted for some other CSS animations instead, like a button the rotates and displays a message when hovered on and a "peeking" pikachu that appears when hovering on the footer. I also wasn't initially going to make the background color change based on the primary type of the pokemon, but without it, the site felt a little dry and boring. I like the change!   
