@@ -1,3 +1,7 @@
+browser.runtime.onMessage.addListener(async message => {
+  console.log("background: onMessage", message);
+});
+
 console.log('Welcome to my site! Dev + Design by Hanna Boorom')
 
 
