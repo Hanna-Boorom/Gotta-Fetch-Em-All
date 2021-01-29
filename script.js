@@ -85,9 +85,15 @@ const showPokeData = ((pokemon) => {
     pokeContainer.style.backgroundColor = "#e699cc"
   } else if (pokemon.types[0].type.name == 'rock') {
     pokeContainer.style.backgroundColor = "#cc9966"
+  } else if (pokemon.types[0].type.name == 'fairy') {
+    pokeContainer.style.backgroundColor = "#f7c8f0"
+  } else if (pokemon.types[0].type.name == 'steel') {
+    pokeContainer.style.backgroundColor = "#a7a8a8"
   } else {
     pokeContainer.style.backgroundColor = "white"
   }
+  
+  
 
   const capitalize = document.querySelector('.container')
   capitalize.style.textTransform = 'capitalize'
