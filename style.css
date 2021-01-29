@@ -170,6 +170,14 @@ footer {
   }
 }
 
+@media screen and (min-width: 1000px) {
+  .results {
+    width: 75%;
+    margin-left: 15%;
+  }
+}
+
+
 
 
 
