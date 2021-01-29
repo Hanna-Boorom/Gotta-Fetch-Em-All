@@ -91,9 +91,9 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Jan 26| Project Approval/ Core HTML & CSS Setup | Complete
 |Jan 27| Core JS Functionality / Connect to API  | Complete
-|Jan 28| Display Correct Data / Finish Basic Styling | Incomplete
-|Jan 29| MVP | Incomplete
-|Jan 30 & 31| Bonus Styling | Incomplete
+|Jan 28| Display Correct Data / Finish Basic Styling | Complete
+|Jan 29| MVP | Complete
+|Jan 30 & 31| Bonus Styling | Complete
 |Feb 1| Presentations/Project Submission | Incomplete
 
 ## Priority Matrix
@@ -106,7 +106,7 @@ Priority Matrix https://res.cloudinary.com/drzmvvogq/image/upload/v1611673089/Sc
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Basic HTML Setup | H | 1hr| 30min | 30min |
-| Basic CSS Setup & Styling | H | 2hr| 3hr| 3hr |
+| Basic CSS Setup & Styling | H | 2hr| 4hr| 4hr |
 | Connect API| H | 1hr| 30min | 30min |
 | Make First Get Request| H | 1hr| 30min | 30min |
 | Target Correct Info from API | H | 2hrs| 1hr | 1hr |
@@ -119,7 +119,7 @@ Priority Matrix https://res.cloudinary.com/drzmvvogq/image/upload/v1611673089/Sc
 | CSS Styling of Each Pokemon's 'Page' | L | 3hr| 4hr | 4hr |
 | Flexbox Styling | L | 3hr| 4hr | 4hr |
 | MediaQuery/(ies) | L | 1hr| 1hr | 1hr |
-| Total | H | 30hr| 23hr | 23hr |
+| Total | H | 30hr| 24hr | 24hr |
 
 ## Code Snippet
 
@@ -144,4 +144,7 @@ try {
 ```
 
 ## Change Log 
-I initially wanted to do a loading bar as a bonus, but I decided against that since I didn't want the user to feel like they were waiting any longer than necessary for the data. I opted for some other CSS animations instead, like a button the rotates and displays a message when hovered on and a "peeking" pikachu that appears when hovering on the footer. I also wasn't initially going to make the background color change based on the primary type of the pokemon, but without it, the site felt a little dry and boring. I like the change!   
+I initially wanted to do a loading bar as a bonus, but I decided against that since I didn't want the user to feel like they were waiting any longer than necessary for the data. I opted for some other CSS animations instead, like a button the rotates and displays a message when hovered on and a "peeking" pikachu that appears when hovering on the footer. 
+
+I also wasn't initially going to make the background color change based on the primary type of the pokemon, but without it, the site felt a little dry and boring. I like the change!  
+
