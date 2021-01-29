@@ -3,8 +3,10 @@
 ## Project Name
 Gotta Fetch 'Em All!
 
+Link to Site: https://gotta-fetch-em-all.netlify.app
+
 ## Project Description
-Gotta Fetch 'Em All! will allow users to search their favorite Pokemon from the original (Red, Blue, and Yellow) games and learn all about them. Just like a real PokeDex!
+Gotta Fetch 'Em All! will allow users to search their favorite Pokemon from the games and learn all about them. Just like a real PokeDex!
 
 ## API and Data Sample
 
