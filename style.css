@@ -73,9 +73,11 @@ header, section, footer {
   margin-bottom: 100px;
   border-radius: 10px;
   font-family: 'Jura', sans-serif;
+  flex-wrap: nowrap;
+  text-align: center;
 }
 
-.results, .description {
+.description {
   flex-wrap: wrap;
 }
 
@@ -170,7 +172,13 @@ footer {
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 800px) {
+  .results {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1080px) {
   .results {
     width: 75%;
     margin-left: 12%;
