@@ -1,24 +1,18 @@
 console.log('Welcome to my site! Dev + Design by Hanna Boorom')
 
 
-// ** 1. CONNECT API AND MAKE FIRST CALL
-// ** 2. TARGET CORRECT POKEMON
-// ** 3. ASSIGN USER INPUT 
-
-
-// CONNECTING API AND VERIFYING THAT INFO I WANT IS DISPLAYING IN CONSOLE
+// CONNECTING API WITH ASYNC FUNCTION
 async function fetchOrigPokes(pokemonName) {
   const allPokemon = `https://pokeapi.co/api/v2/pokemon/`
   const pokeDescr = `https://pokeapi.co/api/v2/pokemon-species/`
 
   try {
     const response = await axios.get(`${allPokemon}${pokemonName}`)
-    // console.log(response.data)
 
     let data = response.data
-    showPokeData(data)
-    // console.log(showPokeData)
+    showPokeData(data) 
 
+  // USED 2 DIFFERENT GET REQUESTS FOR 2 DIFFERENT END POINTS
     const descriptions = await axios.get(`${pokeDescr}${pokemonName}`)
     let descriptionsData = descriptions.data
     showPokeDescription(descriptionsData)
@@ -28,6 +22,7 @@ async function fetchOrigPokes(pokemonName) {
   }
 }
 
+// TARGET THE INFO FOR EACH POKEMON AND CREATE THE HTML
 const showPokeData = ((pokemon) => {
   const pokeInfo = `
   <div class= 'container'>
@@ -40,9 +35,11 @@ const showPokeData = ((pokemon) => {
   `
 
 
-  //** Append Pokemon Data to page
+  //** APPEND POKEMON DATA TO THE PAGE
   let pokeContainer = document.querySelector('.results')
   pokeContainer.insertAdjacentHTML("beforeend", pokeInfo)
+
+
 
   // ** IF A POKEMON HAS MORE THAN ONE TYPE, SHOW ON PAGE
   if (pokemon.types.length === 2) {
@@ -53,10 +50,12 @@ const showPokeData = ((pokemon) => {
     pokeType2 = null;
   }
 
+
   // ** STYLING THAT ONLY SHOWS UP WHEN THE CONTENT LOADS
   pokeContainer.style.border = "thin solid black"
 
-  // ** CHANGE BACKGROUND COLOR BASED ON TYPE
+
+  // ** CHANGE BACKGROUND COLOR BASED ON PRIMARY TYPE
   if (pokemon.types[0].type.name == 'fire') {
     pokeContainer.style.backgroundColor = "#ffb380"
   } else if (pokemon.types[0].type.name == 'electric') {
@@ -94,9 +93,10 @@ const showPokeData = ((pokemon) => {
   }
   
   
-
+// CAPITALIZING EACH WORD IN THE CONTAINER
   const capitalize = document.querySelector('.container')
   capitalize.style.textTransform = 'capitalize'
+
 
   // ** CLEAR OUT SEARCH BAR AFTER MAKING A SEARCH
   const form = document.querySelector('form')
@@ -105,7 +105,7 @@ const showPokeData = ((pokemon) => {
   return pokeInfo
 })
 
-
+// ACCESSING THE 2ND AXIOS CALL TO GET THE DESCRIPTION DATA
 const showPokeDescription = ((pokemon) => {
   const pokeFlavorText = `
   <p class= 'description'>${pokemon.flavor_text_entries[1].flavor_text}</p>
@@ -119,15 +119,16 @@ const showPokeDescription = ((pokemon) => {
 
 
 
-// ** Attach an event listener that simply logs the text value of the input...
+// ** GRABBING THE TEXT VALUE OF THE USER'S INPUT
 const selectInput = document.querySelector('.search-section')
 selectInput.addEventListener('submit', (e) => {
   e.preventDefault()
   const inputValue = document.querySelector('#search-bar').value
-  
-  let lowerCaseValue = inputValue.toLowerCase()
-  // console.log(inputValue)
 
+// CHANGING USER'S INPUT TO ALL LOWERCASE SO UPPERCASE VALUES DON'T BREAK THE CODE
+  let lowerCaseValue = inputValue.toLowerCase()
+
+// CALLING THE REMOVE FUNCTION
   removePokes()
   fetchOrigPokes(lowerCaseValue)
 })
