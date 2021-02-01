@@ -82,10 +82,6 @@ Link to my wireframe here: https://wireframe.cc/oKoj6c
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
-
 |  Day | Deliverable | Status
 |---|---| ---|
 |Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
@@ -94,7 +90,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |Jan 28| Display Correct Data / Finish Basic Styling | Complete
 |Jan 29| MVP | Complete
 |Jan 30 & 31| Bonus Styling | Complete
-|Feb 1| Presentations/Project Submission | Incomplete
+|Feb 1| Presentations/Project Submission | Complete
 
 ## Priority Matrix
 
